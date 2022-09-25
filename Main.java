@@ -5,7 +5,7 @@ import java.util.*;
 public class Main {
 	public static void main (String[] args) {
 		
-		 int sNumber,eNumber,len=0;
+		 int sNumber,eNumber,len=0,sumEve=0,sumOdd=0;
 		 short eveLen=0,oddLen=0;
 		
 		Scanner in = new Scanner(System.in);
@@ -26,11 +26,13 @@ public class Main {
 		{
 			eveLen++;
 			eveList.add(i);
+			sumEve +=i;
 			
 		}
 		else {
 			oddLen++;
 			oddList.add(i);
+			sumOdd +=i;
 			
 		}
 		
@@ -41,6 +43,8 @@ public class Main {
 		System.out.println("\nNumber of odd numbers is :" + oddLen );
 		System.out.println("\nEven Numbers :" + eveList );
 		System.out.println("\nODD Numbers :" + oddList );
+		System.out.println("\nSum of Even Numbers :" + sumEve );
+		System.out.println("\nSum of Odd Numbers :" + sumOdd );
 	}
 
 }
