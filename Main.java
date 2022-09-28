@@ -5,7 +5,7 @@ import java.util.*;
 public class Main {
 	public static void main (String[] args) {
 		
-		 int sNumber,eNumber,len=0,sumEve=0,sumOdd=0;
+		 int sNumber,eNumber,len=0;
 		 short eveLen=0,oddLen=0;
 		
 		Scanner in = new Scanner(System.in);
@@ -26,18 +26,20 @@ public class Main {
 		{
 			eveLen++;
 			eveList.add(i);
-			sumEve +=i;
+			
 			
 		}
 		else {
 			oddLen++;
 			oddList.add(i);
-			sumOdd +=i;
 			
-		}
+			}
 		
 		}
+		
 		len = len-2;
+		int sumEve = eveList.stream().mapToInt(e -> e).sum();
+		int sumOdd = oddList.stream().mapToInt(e -> e).sum();
 		System.out.println("\nNumbers between start to end is:" + len );
 		System.out.println("\nNumber of even numbers is :" + eveLen );
 		System.out.println("\nNumber of odd numbers is :" + oddLen );
